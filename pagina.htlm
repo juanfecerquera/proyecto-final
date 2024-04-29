@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="pagina.css" />
+  <title>Browser</title>
+</head>
+<body class="body">
+    <nav class="nav">
+        
+        <ul class = "nav-1">Autores</ul>
+        <ul class = "nav-1">Libro</ul>
+        <ul class = "nav-1">Permisos</ul>
+        <ul class = "nav-1">Blog</ul>
+        <ul class = "nav-1">Comunidad</ul>
+    
+    </nav>
+    <div class="vacio">
+
+        <h2>
+            Libros
+            <h3>
+                <ul>
+                    <li>Libros actualizados.</li>
+                    <li>Novedades editoriales.</li>
+                    <li>Libros mejores valorados.</li>
+                    <li>Libros más visitados.</li>
+                    <li>Nuevos libros.</li>
+                </ul>
+            </h3>
+        </h2>
+
+    </div>
+    <div class="divcentral1">
+        
+        <div class="autor">
+            <p class="autorTitle">
+                <span>Autor destacado</span>
+            </p>
+            <div class="resumen">
+                
+                <div class="img">
+                    <img src="Mate.png" alt="ImgMate" width="70" height="100">
+                </div>
+                <p class="title">Mate</p>
+                <p class="text">
+                    
+                    Decimos adiós, a sus 90 años, a la escritora guadalupeña Maryse Condé, eterna candidata al Nobel de Literatura por su notable trayectoria literaria compuesta por títulos como «Yo, Tituba, la bruja negra de Salem» y «Corazón que ríe, corazón que llora».
+
+                </p>
+            </div>
+            
+        </div>
+        <div class="temas">
+            <h2>
+                Temas
+                <h3>
+                    <ul>
+                        <li>Acción.</li>
+                        <li>Romance.</li>
+                        <li>Suspenso.</li>
+                        <li>Fantasia.</li>
+                    </ul>
+                </h3>
+            </h2>
+        </div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+
+</html>
+
+
+    
