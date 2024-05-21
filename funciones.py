@@ -49,33 +49,6 @@ def buscar_por_categoria(category: str, results_per_page: int) -> dict:
 
     
 
-    url = "https://all-books-api.p.rapidapi.com/getBooks"
-
-    headers = {
-        "X-RapidAPI-Key": "fbc615dc91mshe3a023dccd77a48p1e2f6cjsn2e2ef44125c6",
-        "X-RapidAPI-Host": "all-books-api.p.rapidapi.com"
-    }
-
-    response = requests.get(url, headers=headers)
-
-    if response.status_code == 200:
-        books_data = response.json()
-
-        # Organizar los datos en un diccionario
-        books_dict = {}
-        for book in books_data:
-            book_id = book['id']
-            books_dict[book_id] = {
-                'title': book.get('title', ''),
-                'author': book.get('author', ''),
-                'published_year': book.get('published_year', ''),
-                'genre': book.get('genre', ''),
-                'description': book.get('description', ''),
-            }
-    else:
-        print("Failed to retrieve data from the API")
-
-    return books_dict
 def create_book_database(books: dict, nombre:str) -> Union[bool, str]:
     try:
         # Conexión a la base de datos (se creará si no existe)
