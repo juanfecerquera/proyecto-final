@@ -50,7 +50,7 @@ def buscar_por_categoria(category: str, results_per_page: int) -> dict:
 def create_book_database(books: dict) -> Union[bool, str]:
     try:
         # Conexión a la base de datos (se creará si no existe)
-        conexion = sqlite3.connect("base de datos")
+        conexion = sqlite3.connect("base_de_datos")
         cursorBF = conexion.cursor()        
 
         # Crear tabla de libros si no existe
