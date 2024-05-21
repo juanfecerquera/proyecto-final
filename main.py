@@ -14,6 +14,13 @@ if status:
 else:
     print("Los libros no se pudieron guardar: ", error)
 
+categoria_3 = funciones.buscar_por_categoria("Mystery & Suspense", 100)
+status, error = funciones.create_book_database(categoria_3)
+if status:
+    print("Libros guardados correctamente.")
+else:
+    print("Los libros no se pudieron guardar: ", error)
+
 
 
 
