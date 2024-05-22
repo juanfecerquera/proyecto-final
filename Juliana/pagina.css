@@ -5,8 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration:none;
-    list-style:none;
+    text-decoration: none;
+    list-style: none;
 }
 
 
@@ -33,12 +33,48 @@ body
     min-height: 70vh;
     display: flex;
     align-items: center;
-
 }
 
-menu{
+.search-bar{
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border:40;
+    outline:none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color:#FFFDFC;
+}
+
+::placeholder{
+    color:#e1e2e6;
+}
+
+.search-bar button img{
+    width:25px;
+}
+
+.search-bar button{
+    border:0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #CE9678;
+    cursor: pointer;
+}
+
+.menu{
     position: absolute;
-    top: 100 ;
+    top: 0;
     left: 0;
     right: 0;
     display: flex;
@@ -48,16 +84,15 @@ menu{
 
 .logo{
     color:#FFFDFC;
-    font-size: 10 px;
-    font-weight:900;
+    font-size: 50 px;
+    font-weight: 700;
 }
 
 .menu .navbar ul li{
-    position: top;
+    position: relative;
     float: left;
-    margin-bottom: 100px;
-
 }
+
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
@@ -76,15 +111,14 @@ menu{
 }
 
 .menu .icono{
-    width:50px;
-
+    width:25px;
 }
 .menu label{
     cursor: pointer;
     display: none;
 }
 .header-content h1{
-    font-size: 75px;
+    font-size: 100px;
     line-height: 80px;
     color: #f9fafc;
     text-transform: uppercase;
@@ -112,7 +146,7 @@ menu{
     
 
 .reseñas {
-    padding: 10px 0;
+    padding: 100px 0;
     background-color: #e1e2e6;
     position: relative;
 
@@ -123,7 +157,7 @@ menu{
 }
 
 .reseñas-content h2{
-    font-size: 50px;
+    font-size: 55px;
     line-height: 70px;
     color: #323337;
     text-transform: uppercase;
@@ -136,11 +170,11 @@ menu{
     font-size: 16 px;
     color:#414247;
     padding: 0 250 px;
-    margin-bottom: 25 px;
+    margin-bottom: 35px;
 
 }
 
-.reseñas-group{
+.reseñas-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50 px;
@@ -169,3 +203,139 @@ menu{
 
 }
 
+.general{
+    display: flex;
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #e1e2e6;
+}
+
+.general-2{
+    background-image: url(proyecto/render.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+} 
+.general-3{
+    background-image: url(proyecto/libros.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}   
+ h2{
+    font-size: 55px;
+    line-height: 70 px;
+    color:#323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+ }
+
+ p{
+    font-size: 16px;
+    color:#414247;
+    margin: 25px 0;
+ }
+
+ form{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow:0 0 20px rgdba (0,0,0,0.2);
+    border-radius: 15px;
+    background-color: #FFFDFC;
+
+}
+
+ h2{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#323337;
+    margin-bottom: 10px;
+}
+
+ label,p {
+    font-size: 17px;
+    color:#414247;
+    margin-bottom:10px ;
+}
+
+ input {
+    padding: 17px;
+    border: 1px solid #CE9678;
+    border-radius:25px;
+    margin-bottom: 25px;
+    background-color: #e1e2e6;
+    outline: none;
+    color: #323337;
+    font-size: 16px;
+}
+
+.btn-1{
+    background-color: #CE9678;
+    font-size:15px ;
+    color:#FFFDFC;
+    text-transform:uppercase;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: #dd8a5e;
+
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+
+
+
+ .best{
+    padding: 100px 0;
+    text-align: center;   
+ }
+
+ .best-content {
+    display: flex;
+    justify-content: space-between;
+ }
+ .best-1 {
+    padding: 15px 55px;
+ }
+
+ .best-1 img{
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+ }
+ .best-1 h3{
+    font-size: 25px;
+    color: #323337;
+ }
+ .footer{
+    padding: 100px 0;
+    background-color: #000000;
+
+ }
+ .footer-content {
+    display: flex;
+    justify-content:space-between ;
+ }
+ .link h3{
+    font-size: 18px;
+    color:#f9fafc;
+    margin-bottom: 15px;
+ }
+ .link a {
+    font-size: 16px;
+    color:#c5c5c5;
+    display: block;
+    margin-bottom: 15px;
+ }
