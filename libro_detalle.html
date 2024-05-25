@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Libro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .book-cover {
+            text-align: center;
+        }
+        .book-cover img {
+            width: 200px;
+            height: auto;
+        }
+        .book-details {
+            margin-top: 20px;
+        }
+        .book-details h2 {
+            margin-bottom: 10px;
+        }
+        .book-details p {
+            margin-bottom: 5px;
+        }
+        .review-form {
+            margin-top: 30px;
+        }
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .review-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .review-form button:hover {
+            background-color: #0056b3;
+        }
+        .reviews {
+            margin-top: 30px;
+        }
+        .review {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="book-cover">
+            <img src="{{ libro['cover_art_url'] }}" alt="{{ libro['title'] }}">
+        </div>
+        <div class="book-details">
+            <h2>{{ libro['title'] }}</h2>
+            <p><strong>Autor:</strong> {{ libro['author'] }}</p>
+            <p><strong>Categorías:</strong> {{ libro['categories'] }}</p>
+            <p><strong>Idioma:</strong> {{ libro['language'] }}</p>
+            <p><strong>ISBN:</strong> {{ libro['isbn'] }}</p>
+            <p><strong>Resumen:</strong> {{ libro['summary'] }}</p>
+        </div>
+
+        <div class="review-form">
+            <h3>Agregar una Reseña</h3>
+            <form action="/libro/{{ libro['isbn'] }}/agregar_resena" method="post">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <textarea name="resena" placeholder="Tu reseña" rows="4" required></textarea>
+                <button type="submit">Enviar Reseña</button>
+            </form>
+        </div>
+
+        <div class="reviews">
+            <h3>Reseñas</h3>
+            {% for resena in libro['reviews'] %}
+            <div class="review">
+                <p><strong>{{ resena['nombre'] }}:</strong></p>
+                <p>{{ resena['resena'] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
